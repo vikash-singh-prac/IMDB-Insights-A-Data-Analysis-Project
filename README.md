@@ -1,5 +1,15 @@
 # IMDB-Insights-A-Data-Analysis-Project
 
+### Introduction:
+
+The project aims to analyze and visualize data from IMDB using a combination of tools including Alteryx, Talend, MySQL, Tableau, and Power BI. 
+
+The deliverables include profiling data and analysis reports generated using Alteryx, a mapping document detailing source-to-target mappings, data modeling with a Type 2 Movie Titles Dimension table, ETL mappings designed in Talend with metadata-based connections, contexts, and environments, as well as SQL scripts for data manipulation and visualization. 
+
+The project encompasses trend analysis, genre analysis, performance metrics, and director success metrics to derive insights such as average movie runtime changes, correlation between movie ratings and release years, genre popularity trends, correlation between runtime and gross earnings, and identification of successful directors based on ratings and gross earnings. 
+
+The final output is visualized through dashboards created in Tableau and Power BI, providing actionable insights for stakeholders.
+
 ### Alteryx:
 
 Alteryx is a powerful data analytics platform that offers a wide range of capabilities, including data profiling. 
