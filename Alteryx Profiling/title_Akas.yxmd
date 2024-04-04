@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="138" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="23">odbc:DSN=MySqlConnect|||select * 
+from imdb_src_movie.imdb_title_akas</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=MySqlConnect
+Query=select * 
+from imdb_src_mov...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="titleId" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="V_WString" />
+            <Field description="PrimaryKey" name="ordering" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="Int32" />
+            <Field name="title" size="1024" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="V_WString" />
+            <Field name="region" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="V_WString" />
+            <Field name="language" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="V_WString" />
+            <Field name="types" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="V_WString" />
+            <Field name="attributes" size="1024" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="V_WString" />
+            <Field name="isOriginalTitle" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="V_WString" />
+            <Field name="DI_Create_DT" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_akas" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="270" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\somes\AppData\Local\Temp\Engine_13840_41fc0eb70995c540ada2c0a676dac1aa_\Engine_13840_f1b2f3a60bdbc64eaa1ea5adb2c3431f~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+        <Position x="270" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Limit_UniqueCount>10000</Limit_UniqueCount>
+          <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+          <IsMetric value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>title_Akas</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="1c8f3517-74c9-45b5-a0ab-d9d6bccb5660" />
+      <Telemetry>
+        <PreviousWorkflowId value="4a4fa01a-b5d2-4175-bd82-841071569a74" />
+        <OriginWorkflowId value="4a4fa01a-b5d2-4175-bd82-841071569a74" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
