@@ -1,4 +1,4 @@
-# IMDB-Insights-A-Data-Analysis-Project
+# IMDB-Insights-A-Data-Warehouse-Project
 
 ### Introduction:
 
