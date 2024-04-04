@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="23">odbc:DSN=MySqlConnect|||select * 
+from damg_finalproj.imdb_numbers_tsv</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=MySqlConnect
+Query=select * 
+from damg_finalpr...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="tconst" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="title" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="Date" size="50" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="Rank" size="50" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="Gross" size="20" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="_YD" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="_LW" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="Theaters" size="30" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="Per_Theater" size="45" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="Total_Gross" size="45" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="Days" size="45" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+            <Field name="Date_created" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="DateTime" />
+            <Field name="PID" size="45" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_numbers_tsv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="246" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\somes\AppData\Local\Temp\Engine_35024_ce3c109898537b48856d58a55152fd3a_\Engine_35024_1de43dde68719542bb08a0a50bbeb51f~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+        <Position x="246" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Limit_UniqueCount>10000</Limit_UniqueCount>
+          <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+          <IsMetric value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Alteryx_numbers_tsv_profiling</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="8b72cb6e-2df8-4557-aed4-7da6a814527e" />
+      <Telemetry>
+        <PreviousWorkflowId value="5ade4bda-5180-4625-b5f2-a62f57c1217e" />
+        <OriginWorkflowId value="5ade4bda-5180-4625-b5f2-a62f57c1217e" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

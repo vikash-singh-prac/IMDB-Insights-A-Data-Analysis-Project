@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="23">odbc:DSN=MySqlConnect|||select * 
+from damg_finalproj.imdb_name_json</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=MySqlConnect
+Query=select * 
+from damg_finalpr...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="nconst" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_name_json" type="V_WString" />
+            <Field name="primaryName" size="38" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_name_json" type="V_WString" />
+            <Field name="birthYear" size="50" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_name_json" type="V_WString" />
+            <Field name="deathYear" size="50" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_name_json" type="V_WString" />
+            <Field name="primaryProfession" size="27" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_name_json" type="V_WString" />
+            <Field name="knownForTitles" size="39" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_name_json" type="V_WString" />
+            <Field name="Date_created" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_name_json" type="DateTime" />
+            <Field name="PID" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_name_json" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="558" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="23">odbc:DSN=MySqlConnect|||select * 
+from damg_finalproj.imdb_title_json</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=MySqlConnect
+Query=select * 
+from damg_finalpr...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="tconst" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+            <Field name="titleType" size="5" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+            <Field name="primaryTitle" size="49" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+            <Field name="originalTitle" size="42" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+            <Field name="isAdult" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="Int32" />
+            <Field name="startYear" size="4" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+            <Field name="endYear" size="2" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+            <Field name="runtimeMinutes" size="3" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+            <Field name="genres" size="24" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+            <Field name="Date_created" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="DateTime" />
+            <Field name="PID" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from damg_finalproj.imdb_title_json" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="186" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\somes\AppData\Local\Temp\Engine_13368_6f1f50cb0e26c34d8ce73974c9625405_\Engine_13368_bb955e9ede554d4e942140c2903242a2~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="690" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\somes\AppData\Local\Temp\Engine_13368_6f1f50cb0e26c34d8ce73974c9625405_\Engine_13368_cb0c41d367c5ca4180d699b0b877bd71~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+        <Position x="186" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Limit_UniqueCount>10000</Limit_UniqueCount>
+          <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+          <IsMetric value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+        <Position x="678" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Limit_UniqueCount>10000</Limit_UniqueCount>
+          <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+          <IsMetric value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Alteryx_json_profiling</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="7cd260f3-97c2-4eb5-8c09-74e2e2a38691" />
+      <Telemetry>
+        <PreviousWorkflowId value="8aa49557-c380-4387-84a6-5e67d8b6a8c9" />
+        <OriginWorkflowId value="8aa49557-c380-4387-84a6-5e67d8b6a8c9" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

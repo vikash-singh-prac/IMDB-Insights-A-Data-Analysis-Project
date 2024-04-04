@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="23">odbc:DSN=MySqlConnect|||select * 
+from imdb_src_movie.imdb_name_basics</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=MySqlConnect
+Query=select * 
+from imdb_src_mov...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="nconst" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_name_basics" type="V_WString" />
+            <Field name="primaryName" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_name_basics" type="V_WString" />
+            <Field name="birthYear" size="4" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_name_basics" type="V_WString" />
+            <Field name="deathYear" size="4" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_name_basics" type="V_WString" />
+            <Field name="primaryProfession" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_name_basics" type="V_WString" />
+            <Field name="knownForTitles" size="1024" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_name_basics" type="V_WString" />
+            <Field name="DI_Create_DT" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_name_basics" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+        <Position x="198" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Limit_UniqueCount>10000</Limit_UniqueCount>
+          <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+          <IsMetric value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="198" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\somes\AppData\Local\Temp\Engine_39328_03f137062e6e1f45a730280657e553d5_\Engine_39328_bff8193fd7b0da4c96aad8fc1b8d82ca~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="402" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" FileFormat="23">odbc:DSN=MySqlConnect|||select * 
+from imdb_src_movie.imdb_title_basics</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <SessionReadOnly>True</SessionReadOnly>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=MySqlConnect
+Query=select * 
+from imdb_src_mov...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="tconst" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="V_WString" />
+            <Field name="titleType" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="V_WString" />
+            <Field name="primaryTitle" size="1024" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="V_WString" />
+            <Field name="originalTitle" size="1024" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="V_WString" />
+            <Field name="isAdult" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="Int16" />
+            <Field name="startYear" size="4" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="V_WString" />
+            <Field name="endYear" size="4" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="V_WString" />
+            <Field name="runtimeMinutes" size="10" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="V_WString" />
+            <Field name="genres" size="255" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="V_WString" />
+            <Field name="DI_Create_DT" source="File: odbc:DSN=MySqlConnect|||select * &#xA;from imdb_src_movie.imdb_title_basics" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="570" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\somes\AppData\Local\Temp\Engine_39328_03f137062e6e1f45a730280657e553d5_\Engine_39328_62ccd51b333b5f4aa4a11c32022a6cf2~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+        <Position x="570" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Limit_UniqueCount>10000</Limit_UniqueCount>
+          <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+          <IsMetric value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>title_Basics</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="e3a44798-cfd6-42a7-974a-a0222e4b33c8" />
+      <Telemetry>
+        <PreviousWorkflowId value="6d8ec020-5ba6-4bb3-bd06-cef7d5abf41b" />
+        <OriginWorkflowId value="6d8ec020-5ba6-4bb3-bd06-cef7d5abf41b" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
