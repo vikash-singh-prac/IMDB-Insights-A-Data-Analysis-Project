@@ -1,0 +1,26 @@
+{
+  "itemId" : "_tZRC8JB1Ee6-Euz8mNQ65g",
+  "contextList" : [ {
+    "contextName" : "Default",
+    "repoId" : "_lvHNEIx3Ee6QwsNOvGFv3w",
+    "parameterList" : [ {
+      "id" : "_lvmVQYx3Ee6QwsNOvGFv3w",
+      "name" : "mysql_imdb_conn_Login"
+    }, {
+      "id" : "_lvmVQox3Ee6QwsNOvGFv3w",
+      "name" : "mysql_imdb_conn_Port"
+    }, {
+      "id" : "_lvmVQ4x3Ee6QwsNOvGFv3w",
+      "name" : "mysql_imdb_conn_AdditionalParams"
+    }, {
+      "id" : "_lvmVRIx3Ee6QwsNOvGFv3w",
+      "name" : "mysql_imdb_conn_Password"
+    }, {
+      "id" : "_lvmVRYx3Ee6QwsNOvGFv3w",
+      "name" : "mysql_imdb_conn_Server"
+    }, {
+      "id" : "_lvmVRox3Ee6QwsNOvGFv3w",
+      "name" : "mysql_imdb_conn_Database"
+    } ]
+  } ]
+}
