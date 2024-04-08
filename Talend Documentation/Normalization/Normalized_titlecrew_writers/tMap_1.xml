@@ -1,0 +1,77 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<externalNode i18n.job.component.parameters="Component Parameters:" i18n.job.properties="Properties" i18n.job.values="Values" i18n.mapper.table.for="Mapper table for " i18n.mapper.table.properties="Mapper table Properties" i18n.job.name="Name" i18n.tmap.matching.mode="Matching-mode" i18n.mapper.table.isminimized="isMinimized" i18n.tmap.isreject="isReject" i18n.tmap.isrejectinnnerjoin="isRejectInnerJoin" i18n.tmap.isinnerjoin="isInnerJoin" i18n.tmap.expressionfilter="expressionFilter" i18n.mapper.table.metadata.entries="Metadata Table Entries" i18n.job.type="Type" i18n.mapper.table.expression="Expression" i18n.tmap.isnullable="isNullable" i18n.tmap.constraint.entries="Constraint Table Entries" name="tMap_1" preview="pictures/_nCVNwI-_Ee6yrsT47tfe4g-tMap_1-PREVIEW.bmp">
+  <parameters>
+    <column name="tStatCatcher Statistics">false</column>
+    <column name="Mapping links display as:">AUTO</column>
+    <column name="Temp data directory path:"></column>
+    <column name="Max buffer size (nb of rows):">2000000</column>
+    <column name="Ignore trailing zeros for BigDecimal">true</column>
+    <column name="Show Information">false</column>
+    <column name="Comment"><![CDATA[Mapping the 3 table title_basics, title_akas and dim_region tables and creating the required mapping of Region_SK and Title_Basics_SK for the bridge table]]></column>
+    <column name="Use an existing validation rule">false</column>
+  </parameters>
+  <mapperTable type="input">
+    <table name="row1" matching-mode="UNIQUE_MATCH" lookup-mode="LOAD_ONCE" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false" activateColumnNameFilter="false" columnNameFilter="null">
+      <metadataTableEntries>
+        <entry name="Title_Basics_SK" type="int" expression="" isNullable="false"/>
+        <entry name="tconst" type="String" expression="" isNullable="false"/>
+        <entry name="titleType" type="String" expression="" isNullable="true"/>
+        <entry name="primaryTitle" type="String" expression="" isNullable="true"/>
+        <entry name="originalTitle" type="String" expression="" isNullable="true"/>
+        <entry name="isAdult" type="Byte" expression="" isNullable="true"/>
+        <entry name="startYear" type="Integer" expression="" isNullable="true"/>
+        <entry name="endYear" type="Integer" expression="" isNullable="true"/>
+        <entry name="runtimeMinutes" type="Integer" expression="" isNullable="true"/>
+        <entry name="DI_Created_Date" type="java.util.Date" expression="" isNullable="false"/>
+        <entry name="DI_JobID" type="String" expression="" isNullable="false"/>
+        <entry name="WK_Filename" type="String" expression="" isNullable="false"/>
+      </metadataTableEntries>
+    </table>
+    <table name="row2" matching-mode="ALL_MATCHES" lookup-mode="LOAD_ONCE" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="true" activateColumnNameFilter="false" columnNameFilter="null">
+      <metadataTableEntries>
+        <entry name="Title_akas_SK" type="int" expression="" isNullable="false"/>
+        <entry name="titleId" type="String" expression="row1.tconst" isNullable="false"/>
+        <entry name="ordering" type="int" expression="" isNullable="false"/>
+        <entry name="title" type="String" expression="" isNullable="true"/>
+        <entry name="region" type="String" expression="" isNullable="true"/>
+        <entry name="language" type="String" expression="" isNullable="true"/>
+        <entry name="types" type="String" expression="" isNullable="true"/>
+        <entry name="attributes" type="String" expression="" isNullable="true"/>
+        <entry name="isOriginalTitle" type="String" expression="" isNullable="true"/>
+        <entry name="DI_Create_DT" type="java.util.Date" expression="" isNullable="false"/>
+        <entry name="DI_Stg_Created_Date" type="java.util.Date" expression="" isNullable="true"/>
+        <entry name="DI_JobId" type="String" expression="" isNullable="true"/>
+      </metadataTableEntries>
+    </table>
+    <table name="row3" matching-mode="ALL_MATCHES" lookup-mode="LOAD_ONCE" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="true" activateColumnNameFilter="false" columnNameFilter="null">
+      <metadataTableEntries>
+        <entry name="Region_SK" type="int" expression="" isNullable="false"/>
+        <entry name="region" type="String" expression="row2.region" isNullable="true"/>
+        <entry name="DI_Created_Date" type="java.util.Date" expression="" isNullable="true"/>
+        <entry name="DI_JobID" type="String" expression="" isNullable="true"/>
+        <entry name="WK_Filename" type="String" expression="" isNullable="false"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+  <mapperTable type="output">
+    <table name="out1" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false" activateColumnNameFilter="false" columnNameFilter="null">
+      <metadataTableEntries>
+        <entry name="Title_Basics_SK" type="int" expression="row1.Title_Basics_SK " isNullable="false"/>
+        <entry name="Region_SK" type="int" expression="row3.Region_SK " isNullable="false"/>
+        <entry name="DI_Created_Date" type="java.util.Date" expression="Var.DI_Created_Date " isNullable="false"/>
+        <entry name="DI_JobId" type="String" expression="Var.DI_JobId " isNullable="false"/>
+        <entry name="WK_Filename" type="String" expression="Var.WK_Filename " isNullable="false"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+  <mapperTable type="var">
+    <table name="Var" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false" activateColumnNameFilter="false" columnNameFilter="null">
+      <metadataTableEntries>
+        <entry name="DI_Created_Date" type="java.util.Date" expression="TalendDate.getCurrentDate() " isNullable="false"/>
+        <entry name="DI_JobId" type="String" expression="pid " isNullable="false"/>
+        <entry name="WK_Filename" type="String" expression="context.mysql_imdb_conn_Database " isNullable="false"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+</externalNode>

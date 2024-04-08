@@ -1,0 +1,50 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<externalNode i18n.job.component.parameters="Component Parameters:" i18n.job.properties="Properties" i18n.job.values="Values" i18n.mapper.table.for="Mapper table for " i18n.mapper.table.properties="Mapper table Properties" i18n.job.name="Name" i18n.tmap.matching.mode="Matching-mode" i18n.mapper.table.isminimized="isMinimized" i18n.tmap.isreject="isReject" i18n.tmap.isrejectinnnerjoin="isRejectInnerJoin" i18n.tmap.isinnerjoin="isInnerJoin" i18n.tmap.expressionfilter="expressionFilter" i18n.mapper.table.metadata.entries="Metadata Table Entries" i18n.job.type="Type" i18n.mapper.table.expression="Expression" i18n.tmap.isnullable="isNullable" i18n.tmap.constraint.entries="Constraint Table Entries" name="tMap_2" preview="pictures/_LVSqoJCeEe6-Euz8mNQ65g-tMap_2-PREVIEW.bmp">
+  <parameters>
+    <column name="tStatCatcher Statistics">false</column>
+    <column name="Mapping links display as:">AUTO</column>
+    <column name="Temp data directory path:"></column>
+    <column name="Max buffer size (nb of rows):">2000000</column>
+    <column name="Ignore trailing zeros for BigDecimal">true</column>
+    <column name="Show Information">false</column>
+    <column name="Comment"><![CDATA[Mapping and creating all the required date component for analysis ]]></column>
+    <column name="Use an existing validation rule">false</column>
+  </parameters>
+  <mapperTable type="input">
+    <table name="row2" matching-mode="UNIQUE_MATCH" lookup-mode="LOAD_ONCE" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false" activateColumnNameFilter="false" columnNameFilter="null">
+      <metadataTableEntries>
+        <entry name="Date" type="java.util.Date" expression="" isNullable="true"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+  <mapperTable type="output">
+    <table name="out2" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false" activateColumnNameFilter="false" columnNameFilter="null">
+      <metadataTableEntries>
+        <entry name="Date_SK" type="Integer" expression="(row2.Date!= null) ? Integer.parseInt(TalendDate.formatDate(&quot;yyyyMMdd&quot;, row2.Date)) : null " isNullable="true"/>
+        <entry name="Date" type="java.util.Date" expression="row2.Date " isNullable="true"/>
+        <entry name="Year" type="Integer" expression="row2.Date != null ? TalendDate.getPartOfDate(&quot;YEAR&quot;, row2.Date) : 0 " isNullable="true"/>
+        <entry name="Month" type="String" expression="row2.Date != null ? TalendDate.formatDate(&quot;MMMM&quot;,row2.Date)  : &quot;0&quot; " isNullable="true"/>
+        <entry name="Day" type="String" expression="row2.Date != null ?  TalendDate.formatDate(&quot;EEEE&quot;,row2.Date) : &quot;0&quot; " isNullable="true"/>
+        <entry name="Season" type="String" expression="(row2.Date != null) ? (
+    (TalendDate.getPartOfDate(&quot;MONTH&quot;, row2.Date) &gt;= 0 &amp;&amp; TalendDate.getPartOfDate(&quot;MONTH&quot;, row2.Date) &lt;= 3) ? &quot;Spring&quot; :
+    (TalendDate.getPartOfDate(&quot;MONTH&quot;, row2.Date) &gt;= 4 &amp;&amp; TalendDate.getPartOfDate(&quot;MONTH&quot;, row2.Date) &lt;= 7) ? &quot;Summer&quot; :
+    (TalendDate.getPartOfDate(&quot;MONTH&quot;, row2.Date) &gt;= 8 &amp;&amp; TalendDate.getPartOfDate(&quot;MONTH&quot;, row2.Date) &lt;= 11) ? &quot;Fall&quot; :
+    &quot;Unknown&quot;
+) : &quot;Unknown&quot; " isNullable="true"/>
+        <entry name="DI_Created_Date" type="java.util.Date" expression="Var.DI_Created_Date " isNullable="false"/>
+        <entry name="DI_JobId" type="String" expression="Var.DI_JobId " isNullable="false"/>
+        <entry name="WK_Filename" type="String" expression="Var.WK_Filename " isNullable="false"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+  <mapperTable type="var">
+    <table name="Var" isMinimized="false" isReject="false" isRejectInnerJoin="false" isInnerJoin="false" isPersistent="false" expressionFilter="null" activateExpressionFilter="false" activateCondensedTool="false" activateColumnNameFilter="false" columnNameFilter="null">
+      <metadataTableEntries>
+        <entry name="DI_Created_Date" type="java.util.Date" expression="TalendDate.getCurrentDate() " isNullable="false"/>
+        <entry name="DI_JobId" type="String" expression="pid" isNullable="false"/>
+        <entry name="WK_Filename" type="String" expression="context.mysql_imdb_conn_Database " isNullable="false"/>
+      </metadataTableEntries>
+    </table>
+  </mapperTable>
+</externalNode>
