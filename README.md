@@ -15,6 +15,38 @@ The final output is visualized through dashboards created in Tableau and Power B
 ![Architecture Diagram](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/650a62a9-31a9-48b1-be65-9dda0d95276f)
 
 
+
+- Data Profiling and Analysis: Conducted profiling, processing, and analysis of the the below datasets using Alteryx to derive insights on data.
+
+MySQL database tables:
+
+	imdb_name_basics
+	imdb_title_akas
+	imdb_title_basics
+	imdb_title_crew
+	imdb_title_principals
+	imdb_title_ratings
+
+ TSV file: Numbers.tsv
+
+SCD2 JSON files:
+
+	new_name_basics.json
+	new_title_basics.json	
+	
+	
+
+• Dimensional Data Modeling: Developed an extensive dimensional data model comprising 10 dimensions and 2 facts using ER/Studio, resulting in the generation of DDL scripts. 
+
+
+• Data Integration and Pipeline Orchestration: Implemented a seamless end-to-end data pipeline through Talend, overseeing the staging, cleansing, transformation, loading, and integration of over 600,000 records into respective dimensions and facts within MySQL and Azure PostgreSQL databases. 
+
+• SQL Queries and Visualization: Created SQL queries for data sanity checks and utilized Tableau and Power BI to design impactful visualizations. These visualizations offered profound insights into inspection trends over time, success rates of inspections, evolving inspection outcomes, and more.
+
+### Dimension Model:
+
+<img width="577" alt="Dimensional_Model" src="https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/d8805ec0-8037-4b85-bcb5-22a3353b0ef3">
+
 ### Alteryx:
 
 Alteryx is a powerful data analytics platform that offers a wide range of capabilities, including data profiling. 
