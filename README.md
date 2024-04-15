@@ -10,6 +10,11 @@ The project encompasses trend analysis, genre analysis, performance metrics, and
 
 The final output is visualized through dashboards created in Tableau and Power BI, providing actionable insights for stakeholders.
 
+### Architecture Diagram
+
+![Architecture Diagram](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/650a62a9-31a9-48b1-be65-9dda0d95276f)
+
+
 ### Alteryx:
 
 Alteryx is a powerful data analytics platform that offers a wide range of capabilities, including data profiling. 
@@ -34,3 +39,4 @@ Talend is a widely-used open-source integration platform that facilitates data i
 - Open Source: Talend is built on open-source technologies, which means users have access to the source code and can customize it to suit their specific requirements.
 
 Overall, Talend simplifies the complexities of data integration and management, enabling organizations to streamline their data workflows, improve data quality, and derive actionable insights from their data assets. Its open-source nature, scalability, and ease of use make it a preferred choice for businesses looking to harness the power of their data.
+
