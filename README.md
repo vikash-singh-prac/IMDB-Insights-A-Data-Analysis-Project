@@ -96,3 +96,44 @@ Talend is a widely-used open-source integration platform that facilitates data i
 
 Overall, Talend simplifies the complexities of data integration and management, enabling organizations to streamline their data workflows, improve data quality, and derive actionable insights from their data assets. Its open-source nature, scalability, and ease of use make it a preferred choice for businesses looking to harness the power of their data.
 
+### Business Requirements:
+
+- Actor Film Record:
+
+![Actor Film Record](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/74b893ce-5a4b-4fd8-b40c-b2b5e723ac81)
+
+- Box Office Matrix:
+
+![Box Office Matrix](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/9b8501db-cf0d-4eda-b913-8b060d557950)
+
+- Director Sucess Matrix: 
+
+![Director Sucess Matrix](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/c0ce03f1-7867-4115-bdaf-106a1146102d)
+
+- Genre Analysis:
+
+![Gener Analysis](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/110c5a3c-2802-44fa-9b34-b39d87bec073)
+
+- Movie Analysis:
+
+![Movie Analyis](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/4b7a42c0-7f49-4c95-85dc-0ec6928b7ace)
+
+- Performance Metrics
+
+![Performance Metrics](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/726e2357-ccf4-4a1b-abfe-8e36d8a70fde)
+
+- Release Regions:
+
+![Release Regions](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/971beb52-c6a1-4e2e-a75f-9041c4f780d8)
+
+- Seasonal Analysis:
+
+![Seasonal Analysis](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/ade67d17-b893-4ef5-a128-23b0cf5c12af)
+
+- Trend Analysis: 
+
+![Trend Analysis 2](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/2f1d7b9b-4688-4bc2-947d-81ccf3b3797d)
+
+- Trend Analysis 2:
+
+![Trend Analysis](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/69c59e0f-74b7-4818-8aef-381257ca79d3)
