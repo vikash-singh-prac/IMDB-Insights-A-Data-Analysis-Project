@@ -47,6 +47,30 @@ SCD2 JSON files:
 
 <img width="577" alt="Dimensional_Model" src="https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/d8805ec0-8037-4b85-bcb5-22a3353b0ef3">
 
+### Talend Jobs:
+
+#### Dimension Title Basics:
+
+![image](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/d1783a66-cac3-4302-9d93-e9cb6df20d70)
+
+#### Dimension Title and Genre:
+
+![image](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/f370fa67-40a1-4916-8ce3-ae6dd8def7fc)
+
+
+#### Dimension Title and Director:
+
+![image](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/c3dd44d5-6a6c-4ab7-ae71-0479a8b5c2ac)
+
+#### Dimemsion Date:
+
+![image](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/07187a42-c696-48f1-9b61-65ea820d5a34)
+
+#### Fact Movies Numbers:
+
+![image](https://github.com/vikash-singh-prac/IMDB-Insights-A-Data-Warehouse-Project/assets/58064949/211ff86d-ef35-414f-932e-f575df818e45)
+
+
 ### Alteryx:
 
 Alteryx is a powerful data analytics platform that offers a wide range of capabilities, including data profiling. 
